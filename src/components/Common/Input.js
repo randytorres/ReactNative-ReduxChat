@@ -32,7 +32,7 @@ const styles = {
     height: 40,
     fontSize: 18,
     lineHeight: 20,
-    borderBottomWidth: .5,
+    borderBottomWidth: .35,
     borderColor: '#fff',
     paddingLeft: 10
   },

@@ -1,7 +1,21 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import firebase from 'firebase';
+import Exponent from 'exponent';
+import {
+  createRouter,
+  NavigationProvider,
+  StackNavigation,
+} from '@exponent/ex-navigation';
+
+
 import Login from './components/Login';
+import SignUp from './components/SignUp';
+
+export const Router = createRouter(() => ({
+  home: () => Login,
+  signup: () => SignUp,
+}))
 
 class App extends Component {
   componentWillMount() {
@@ -17,9 +31,9 @@ class App extends Component {
 
   render() {
     return (
-      <View style={{ flex: 1 }}>
-        <Login />
-      </View>
+      <NavigationProvider router={Router}>
+        <StackNavigation initialRoute={Router.getRoute('home')} />
+      </NavigationProvider>
     )
   }
 }

@@ -1,0 +1,8 @@
+{
+  "exponentServerPort": 19000,
+  "packagerPort": 19001,
+  "packagerPid": 8584,
+  "exponentServerNgrokUrl": "https://7u-t83.torresr14.reduxchat.exp.direct",
+  "packagerNgrokUrl": "https://packager.7u-t83.torresr14.reduxchat.exp.direct",
+  "ngrokPid": 8629
+}

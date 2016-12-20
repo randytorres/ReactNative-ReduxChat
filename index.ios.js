@@ -1,5 +1,7 @@
 import React from 'react';
 import { AppRegistry } from 'react-native';
+import Exponent from 'exponent';
+import 'exponent'
 import App from './src/App';
 
-AppRegistry.registerComponent('ReduxChat', () => App);
+Exponent.registerRootComponent(App);

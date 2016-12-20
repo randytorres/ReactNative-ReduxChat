@@ -1,8 +1,22 @@
 import React, { Component } from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { Input, Button } from './Common';
+import Exponent from 'exponent';
+
+import { Router } from '../App';
 
 class Login extends Component {
+
+  static route = {
+    // navigationBar: {
+    //   title: 'Home',
+    // }
+  }
+
+  _goToSignUp = () => {
+    this.props.navigator.push(Router.getRoute('signup'));
+  }
+
   render() {
     const { textColor, title, emailIcon, passwordIcon, container, bottomContainer } = styles;
 
@@ -32,7 +46,7 @@ class Login extends Component {
 
           <View style={bottomContainer}>
             <Text  style={[textColor, {fontWeight: '300'}]}>Don't have an account?</Text>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={this._goToSignUp}>
               <Text style={textColor}> SIGN UP </Text>
             </TouchableOpacity>
           </View>
